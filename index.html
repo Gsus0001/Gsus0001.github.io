@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- En este documento voy a crear el portafolio, documentando todo lo escrito al momento de que se quiera que se presente-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Metadatos descriptivos-->
+    <meta name="description" 
+        content="Portafolio de Jesus David Perez, Técnico Universitario en Programación (UTN) y estudiante de Ciberseguridad. Proyectos de desarrollo web y contacto.">
+    <meta name="keywords" content="portafolio, desarrollador web, programador, proyectos, contacto">
+    <meta name="author" content="Perez Jesus David">
+    <title>Portafolio Web | Jesus David Perez</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sobremi.css">
+    <link rel="stylesheet" href="./css/experiencia.css">
+    <link rel="stylesheet" href="./css/estudios.css">
+    <link rel="stylesheet" href="./css/proyecto.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/formulario.css">
+    <link rel="stylesheet" href="./css/terminosycondiciones.css">
+
+    <!--Aplica el tema guardado ANTES de pintar, para evitar el parpadeo-->
+    <script>
+        (function () {
+            var guardado = localStorage.getItem("tema");
+            var sistemaOscuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var tema = guardado || (sistemaOscuro ? "oscuro" : "claro");
+            document.documentElement.setAttribute("data-tema", tema);
+        })();
+    </script>
+    
+</head>
+
+<body>
+    <!--Línea de estado tipo consola-->
+    <span class="status-line">sys://Gsus0001.dev · <span class="online">online</span> · 34.61°S 68.33°W · San Rafael, MDZ, AR</span>
+
+    <header>
+        <h1 class="titulo">Jesus David Perez</h1>
+        <div class="header-top">
+            <nav>
+                <!--Navegación-->
+                <ul class="navigation">
+                    <li><a href="#sobremi">Sobre Mí</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#estudios">Mis Estudios</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <!--Botón para alternar modo claro/oscuro-->
+            <button id="tema-toggle" class="tema-toggle" type="button" aria-label="Cambiar tema claro u oscuro">🌙</button>
+        </div>
+    </header>
+    <main class="main-container">
+        <!--Sobre Mi-->
+        <section id="sobremi" class="sobremi">
+            <div class="container-sobremi">
+                <span class="comando">whoami</span>
+                <h2>Sobre Mí</h2>
+                <div class="contenido-sobremi">
+                    <img class="img-perfil" src="./assets/Yo.jpeg" alt="fotografía de Jesus David Perez" width="200" height="200">
+                    <div class="texto-sobremi">
+                        <p>
+                            ¡Holaa!, me presento, soy Jesus D. Perez estudiante de la <strong>Tecnicatura en Programación</strong>, en la UTN San Rafael, soy novato en todo esto, pero me gusta investigar,
+                            probar y tratar de solucionar el problema, entendiendo en el proceso, me llama la atención la ciberseguridad, es por ello que estoy estudiando a la vez que la TUP, una <strong>Diplomatura en Ciberseguridad</strong>, también en la UTN San Rafael. 
+                            Me gusta quemarme la cabeza descifrando sistemas operativos como Linux. Fan de las computadoras como asi tambien gamer de corazon, sin mas espero que te guste lo que ves por estos lados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experiencia" class="experiencia">
+            <div class="container-experiencia">
+                <span class="comando">cat experiencia.log</span>
+                <h2>Experiencias Laborales</h2>
+
+                <div class="lista-experiencia">
+                    <!--Timeline: cada trabajo es una tarjeta con línea de tiempo-->
+                    <article class="trabajo">
+                        <h3>Operador de Producción · Operador CNC</h3>
+                        <p class="trabajo-meta">
+                            <span class="empresa">Tassaroli S.A.</span>
+                            <span class="periodo">Febrero 2024 - Presente</span>
+                        </p>
+                        <p>Me desempeño como Operador de Torno CNC (Femco HL-55 con control Fanuc), estando a cargo de la puesta a punto, la programación al pie de máquina, la operación y la colaboración en el mantenimiento autónomo del equipamiento.
+Asimismo, aporto versatilidad operando en distintas áreas de producción, ensamblado de componentes mecánicos bajo tolerancias ajustadas, asegurando el cumplimiento de estrictos procedimientos de calidad bajo normas ISO y especificaciones API.
+                        </p>
+                    </article>
+
+                    <article class="trabajo">
+                        <h3>Atención al cliente</h3>
+                        <p class="trabajo-meta">
+                            <span class="empresa">Heladería Josselin</span>
+                            <span class="periodo">Diciembre 2022 - Febrero 2024</span>
+                        </p>
+                        <p>Me desempeñé en la atención al cliente, asegurando un servicio de excelencia. Estuve a cargo de la operación de caja de cobro, las tareas de mantenimiento general del local, así como de los procedimientos de apertura y cierre de la sucursal</p>
+                    </article>
+
+                    <article class="trabajo">
+                        <h3>Atención al cliente</h3>
+                        <p class="trabajo-meta">
+                            <span class="empresa">Heladería Anahí</span>
+                            <span class="periodo">Diciembre 2022 - Febrero 2024</span>
+                        </p>
+                        <p>Me desempeñé en la atención al cliente, asegurando un servicio de excelencia. Estuve a cargo de la operación de caja de cobro, las tareas de mantenimiento general del local, así como de los procedimientos de apertura y cierre de la sucursal</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="estudios" class="estudios">
+            <div class="container-estudios">
+                <span class="comando">ls ~/estudios</span>
+                <h2>Mis Estudios</h2>
+
+                <div class="lista-estudios">
+                    <div class="estudio">
+                        <div class="estudio-info">
+                            <h3>Diplomatura en Ciberseguridad y Análisis Forense</h3>
+                            <p>Universidad Tecnológica Nacional - Facultad Regional San Rafael</p>
+                            <p>Agosto 2026 - Cursando</p>
+                        </div>
+                        <img class="estudio-img" src="./assets/Diplomatura UTN.jpeg" alt="Diplomatura en Ciberseguridad y Análisis Forense">
+                    </div>
+
+                    <div class="estudio">
+                        <div class="estudio-info">
+                            <h3>Tecnicatura en Programación</h3>
+                            <p>Universidad Tecnológica Nacional - Facultad Regional San Rafael</p>
+                            <p>Marzo 2026 - Cursando</p>
+                        </div>
+                        <img class="estudio-img" src="./assets/UTN San Rafael.jpeg" alt="UTN Facultad Regional San Rafael">
+                    </div>
+
+                    <div class="estudio">
+                        <div class="estudio-info">
+                            <h3>Diplomatura en Administrador de Servidores</h3>
+                            <p>Universidad Tecnológica Nacional - Facultad Regional Delta</p>
+                            <p>Marzo 2026 - Pendiente</p>
+                        </div>
+                        <img class="estudio-img" src="./assets/UTN Delta.jpeg" alt="UTN Facultad Regional Delta">
+                    </div>
+
+                    <div class="estudio">
+                        <div class="estudio-info">
+                            <h3>Soldador Avanzado (RES. CFE N°108/10 Anexo 17)</h3>
+                            <p>Centro de Formación, Carlos José Tassaroli</p>
+                            <p>Agosto 2023 - Diciembre 2024</p>
+                        </div>
+                        <img class="estudio-img" src="./assets/Tassaroli.jpeg" alt="Centro Tecnológico Carlos José Tassaroli">
+                    </div>
+
+                    <div class="estudio">
+                        <div class="estudio-info">
+                            <h3>Técnico en Equipos e Instalaciones Electromecánicas</h3>
+                            <p>Ejército de los Andes 4-117</p>
+                            <p>Marzo 2018 - Diciembre 2023</p>
+                        </div>
+                        <img class="estudio-img" src="./assets/Ejercito de los Andes.jpeg" alt="Escuela 4-117 Ejército de los Andes">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="proyectos">
+            <div class="container-proyectos">
+                <span class="comando">ls ~/proyectos</span>
+                <h2>Proyectos</h2>
+                <div class="galeria-proyectos">
+                    <div class="proyecto">
+                        <img src="./assets/proyecto1.jpeg" alt="Foto del proyecto 1">
+                        <h3>Gestor de Inventario</h3>
+                        <p>
+                            Es un sistema de gestión de inventarios con funcionalidades de QR y lector de código de barras; el backend está implementado en Go, con base de datos en MySQL levantada en Docker, y frontend en HTML y JavaScript. Este proyecto fue realizado en equipo con mi amigo ambos estudiantes de la UTN San Rafael.
+                        </p>
+                        <div class="proyecto-botones">
+                            
+                            <a href="https://github.com/FrancoCP12/CleanManager" target="_blank" rel="noopener" class="btn-proyecto">
+                                <!--Ícono: GitHub-->
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+
+                            <!--Botón Tecnologías: el tooltip se muestra al pasar el mouse o al enfocarlo con Tab-->
+                            <div class="tooltip-contenedor">
+                                <button href="#" class="btn-proyecto" aria-describedby="tooltip-tecnologias">
+                                    <!--Ícono: chip / tecnologías-->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                        <rect x="7" y="7" width="10" height="10" rx="1.5"></rect>
+                                        <path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"></path>
+                                    </svg>
+                                    <span>Tecnologías</span>
+                                </a>
+
+                                <!--TOOLTIP DE TECNOLOGÍAS
+                                    Para AGREGAR una tecnología: copiá una línea <li>...</li> y cambiá el texto.
+                                    Para QUITARLA: borrá su línea <li>...</li>.
+                                    Ejemplo: <li>Python</li>
+                                -->
+                                <div class="tooltip-tecnologias" id="tooltip-tecnologias" role="tooltip">
+                                    <span class="tooltip-titulo">Tecnologías usadas</span>
+                                    <ul class="tooltip-lista">
+                                        <li>Go</li>
+                                        <li>MySQL</li>
+                                        <li>Docker</li>
+                                        <li>HTML</li>
+                                        <li>JavaScript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Formulario de contacto-->
+        <section id="contacto" class="contacto">
+            <div class="container-contacto">
+                <span class="comando">ls ~/contacto</span>
+                <h2>Contacto</h2>
+
+                <div class="formulario-contacto">
+                    <div class="terminal-contacto">
+                        <div class="terminal-barra">
+                            <span class="terminal-puntos" aria-hidden="true">
+                                <span class="terminal-punto punto-rojo"></span>
+                                <span class="terminal-punto punto-amarillo"></span>
+                                <span class="terminal-punto punto-verde"></span>
+                            </span>
+                            <span class="terminal-titulo">gsus@portfolio: ~/contacto</span>
+                        </div>
+
+                        <div class="contact-header">
+                            
+                            <h3 class="contact-title">Nueva consulta</h3>
+                            <p class="contact-subtitle">Me gustaría saber de ti. Por favor, completá el siguiente formulario.</p>
+                        </div>
+
+                        <form class="contact-form">
+                            <!--Campo trampa anti-spam de Formspree: no lo completes nunca-->
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
+                            <div class="form-grup">
+                                <label for="contacto-nombre">Nombre</label>
+                                <input id="contacto-nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="given-name" required>
+                            </div>
+
+                            <div class="form-grup">
+                                <label for="contacto-apellido">Apellido</label>
+                                <input id="contacto-apellido" name="apellido" type="text" placeholder="Tu apellido" autocomplete="family-name" required>
+                            </div>
+
+                            <div class="form-grup">
+                                <label for="contacto-email">Correo electrónico</label>
+                                <input id="contacto-email" name="email" type="email" placeholder="ejemplo.123@gmail.com" autocomplete="email" required>
+                            </div>
+
+                            <div class="form-grup">
+                                <label for="contacto-telefono">Teléfono</label>
+                                <input id="contacto-telefono" name="telefono" type="tel" placeholder="+54 9 123 456-7890" autocomplete="tel" required>
+                            </div>
+
+                            <div class="form-grup span-all">
+                                <label for="contacto-mensaje">Mensaje</label>
+                                <textarea id="contacto-mensaje" name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+                            </div>
+
+                            <div class="form-terms span-all">
+                                <input id="contacto-terminos" name="terminos" type="checkbox" required>
+                                <label for="contacto-terminos">Acepto los términos y condiciones de uso</label>
+                            </div>
+
+                            <!--Desplegable de términos y condiciones queda abierto mientras el usuario no acepta, y se oculta al aceptar.-->
+                            <details class="terminos-desplegable span-all" open>
+                                <summary class="enlace-terminos">Leer términos y condiciones</summary>
+                                <div class="contenido-terminos">
+                                    <h4>Términos y Condiciones de Uso</h4>
+                                    <p>
+                                        Los datos personales proporcionados en este formulario serán utilizados exclusivamente para responder a tus consultas de contacto. No serán compartidos ni transferidos a terceros.
+                                    </p>
+                                </div>
+                            </details>
+
+                            <button class="submit-btn span-all" type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <div id="flas-messages" class="flas-messages"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p><strong>📄 Este Portafolio fue revisado, sellado y aprobado por el Departamento de Burocracia de Git</strong></p>
+                <p><strong>N° de expediente: GIT-2026-003 | Fecha de emisión: Hoy | Validez: Hasta el próximo commit --force</strong></p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/gsus_0001/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <!--Img de Instagram-->
+                    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"></rect> <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"></path> <defs> <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"> <stop stop-color="#B13589"></stop> <stop offset="0.79309" stop-color="#C62F94"></stop> <stop offset="1" stop-color="#8A3AC8"></stop> </radialGradient> <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"> <stop stop-color="#E0E8B7"></stop> <stop offset="0.444662" stop-color="#FB8A2E"></stop> <stop offset="0.71474" stop-color="#E2425C"></stop> <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop> </radialGradient> <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"> <stop offset="0.156701" stop-color="#406ADC"></stop> <stop offset="0.467799" stop-color="#6A45BE"></stop> <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop> </radialGradient> </defs> </g>
+                    </svg>
+                </a>
+
+                <a href="https://github.com/Gsus0001" target="_blank" rel="noopener" aria-label="GitHub">
+                        <!--Img de GitHub-->
+                        <svg viewBox="0 0 73 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>team-collaboration/version-control/github</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="team-collaboration/version-control/github" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="container" transform="translate(2.000000, 2.000000)" fill-rule="nonzero"> <rect id="mask" stroke="#000000" stroke-width="2" fill="#000000" x="-1" y="-1" width="71" height="71" rx="14"> </rect> <path d="M58.3067362,21.4281798 C55.895743,17.2972267 52.6253846,14.0267453 48.4948004,11.615998 C44.3636013,9.20512774 39.8535636,8 34.9614901,8 C30.0700314,8 25.5585181,9.20549662 21.4281798,11.615998 C17.2972267,14.0266224 14.0269912,17.2972267 11.615998,21.4281798 C9.20537366,25.5590099 8,30.0699084 8,34.9607523 C8,40.8357654 9.71405782,46.1187277 13.1430342,50.8109917 C16.5716416,55.5036246 21.0008949,58.7507436 26.4304251,60.5527176 C27.0624378,60.6700211 27.5302994,60.5875152 27.8345016,60.3072901 C28.1388268,60.0266961 28.290805,59.6752774 28.290805,59.2545094 C28.290805,59.1842994 28.2847799,58.5526556 28.2730988,57.3588401 C28.2610487,56.1650247 28.2553926,55.1235563 28.2553926,54.2349267 L27.4479164,54.3746089 C26.9330843,54.468919 26.2836113,54.5088809 25.4994975,54.4975686 C24.7157525,54.4866252 23.9021284,54.4044881 23.0597317,54.2517722 C22.2169661,54.1004088 21.4330982,53.749359 20.7075131,53.1993604 C19.982297,52.6493618 19.4674649,51.9294329 19.1631397,51.0406804 L18.8120898,50.2328353 C18.5780976,49.6950097 18.2097104,49.0975487 17.7064365,48.4426655 C17.2031625,47.7871675 16.6942324,47.3427912 16.1794003,47.108799 L15.9336039,46.9328437 C15.7698216,46.815909 15.6178435,46.6748743 15.4773006,46.511215 C15.3368806,46.3475556 15.2317501,46.1837734 15.1615401,46.0197452 C15.0912072,45.855594 15.1494901,45.7209532 15.3370036,45.6153308 C15.5245171,45.5097084 15.8633939,45.4584343 16.3551097,45.4584343 L17.0569635,45.5633189 C17.5250709,45.6571371 18.104088,45.9373622 18.7947525,46.4057156 C19.4850481,46.8737001 20.052507,47.4821045 20.4972521,48.230683 C21.0358155,49.1905062 21.6846737,49.9218703 22.4456711,50.4251443 C23.2060537,50.9284182 23.9727072,51.1796248 24.744894,51.1796248 C25.5170807,51.1796248 26.1840139,51.121096 26.7459396,51.0046532 C27.3072505,50.8875956 27.8338868,50.7116403 28.3256025,50.477771 C28.5362325,48.9090515 29.1097164,47.7039238 30.0455624,46.8615271 C28.7116959,46.721353 27.5124702,46.5102313 26.4472706,46.2295144 C25.3826858,45.9484285 24.2825656,45.4922482 23.1476478,44.8597436 C22.0121153,44.2280998 21.0701212,43.44374 20.3214198,42.5080169 C19.5725954,41.571802 18.9580429,40.3426971 18.4786232,38.821809 C17.9989575,37.300306 17.7590632,35.5451796 17.7590632,33.5559381 C17.7590632,30.7235621 18.6837199,28.3133066 20.5326645,26.3238191 C19.6665366,24.1944035 19.7483048,21.8072644 20.778215,19.1626478 C21.4569523,18.951772 22.4635002,19.1100211 23.7973667,19.6364115 C25.1314792,20.1630477 26.1082708,20.6141868 26.7287253,20.9882301 C27.3491798,21.3621504 27.8463057,21.6790175 28.2208409,21.9360032 C30.3978419,21.3277217 32.644438,21.0235195 34.9612442,21.0235195 C37.2780503,21.0235195 39.5251383,21.3277217 41.7022622,21.9360032 L43.0362517,21.0938524 C43.9484895,20.5319267 45.0257392,20.0169716 46.2654186,19.5488642 C47.5058357,19.0810026 48.4543466,18.9521409 49.1099676,19.1630167 C50.1627483,21.8077563 50.2565666,24.1947724 49.3901927,26.324188 C51.2390143,28.3136755 52.1640399,30.7245457 52.1640399,33.556307 C52.1640399,35.5455485 51.9232849,37.3062081 51.444357,38.8393922 C50.9648143,40.3728223 50.3449746,41.6006975 49.5845919,42.5256002 C48.8233486,43.4503799 47.8753296,44.2285916 46.7404118,44.8601125 C45.6052481,45.4921252 44.504759,45.9483056 43.4401742,46.2293914 C42.3750975,46.5104772 41.1758719,46.7217219 39.8420054,46.8621419 C41.0585683,47.9149226 41.6669728,49.5767225 41.6669728,51.846804 L41.6669728,59.2535257 C41.6669728,59.6742937 41.8132948,60.0255895 42.1061847,60.3063064 C42.3987058,60.5865315 42.8606653,60.6690374 43.492678,60.5516109 C48.922946,58.7498829 53.3521992,55.5026409 56.7806837,50.810008 C60.2087994,46.117744 61.923472,40.8347817 61.923472,34.9597686 C61.9222424,30.0695396 60.7162539,25.5590099 58.3067362,21.4281798 Z" id="Shape" fill="#FFFFFF"> </path> </g> </g> </g>
+                        </svg>
+                </a>
+                <a href="https://linkedin.com/in/gsus0001" target="_blank" rel="noopener" aria-label="Linkedin">
+                    <!--Img de Linkedin-->
+                    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#0A66C2" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"></path></g>
+                    </svg>
+                </a>
+
+                <a href="https://www.facebook.com/gsus0001" target="_blank" rel="noopener" aria-label="Facebook">
+                    <!--Img de Facebook-->
+                    <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Facebook-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -160.000000)" fill="#4460A0"> <path d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z" id="Facebook"> </path> </g> </g> </g>
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; 2026 Jesus David Perez. Todos los derechos reservados.</p>
+        </div>    
+    </footer>
+
+    <!--Script del botón de tema claro/oscuro-->
+    <script>
+        (function () {
+            var raiz = document.documentElement;
+            var boton = document.getElementById("tema-toggle");
+
+            function temaActual() {
+                return raiz.getAttribute("data-tema") || "oscuro";
+            }
+            function pintarBoton() {
+                // Muestra el ícono del tema AL QUE SE VA A CAMBIAR
+                boton.textContent = temaActual() === "oscuro" ? "☀️" : "🌙";
+                boton.setAttribute("aria-label",
+                    temaActual() === "oscuro" ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
+            }
+            function aplicar(tema, guardar) {
+                raiz.setAttribute("data-tema", tema);
+                if (guardar) {
+                    localStorage.setItem("tema", tema);
+                }
+                pintarBoton();
+            }
+
+            pintarBoton();
+
+            boton.addEventListener("click", function () {
+                aplicar(temaActual() === "oscuro" ? "claro" : "oscuro", true);
+            });
+
+            // Si el usuario nunca eligió, seguimos la preferencia del sistema en vivo
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
+                if (!localStorage.getItem("tema")) {
+                    aplicar(e.matches ? "oscuro" : "claro", false);
+                }
+            });
+        })(); //El () ejecuta la funcion de cambio de color
+    </script>
+
+    <!--Script del formulario de contacto-->
+    <script src="./js/contacto.js" defer></script>
+</body>
+
+</html>

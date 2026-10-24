@@ -1,0 +1,79 @@
+/*Contenedor del desplegable*/
+.terminos-desplegable{
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--form-texto-tenue);
+}
+
+/*Texto que abre y cierra el desplegable*/
+.enlace-terminos{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--form-verde);
+    text-decoration: underline dotted;
+    list-style: none; /*quita el indicador nativo*/
+    cursor: pointer;
+    transition: color 0.2s;
+}
+/*Quita la flecha nativa en navegadores WebKit*/
+.enlace-terminos::-webkit-details-marker{
+    display: none;
+}
+/*Flecha propia, cambia según esté abierto o cerrado*/
+.enlace-terminos::before{
+    content: "▸";
+    font-size: 0.7rem;
+    line-height: 1;
+}
+.terminos-desplegable[open] .enlace-terminos::before{
+    content: "▾";
+}
+.enlace-terminos:hover{
+    color: var(--form-verde-hover);
+    text-decoration: underline;
+}
+.enlace-terminos:focus-visible{
+    outline: 2px solid var(--form-verde);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/*Caja con el texto de los términos*/
+.contenido-terminos{
+    margin-top: 0.25rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--form-texto-tenue);
+    background-color: var(--form-campo-bg);
+    border: 1px solid var(--form-campo-borde);
+    border-left: 3px solid var(--form-verde);
+    border-radius: 6px;
+    max-height: 160px;
+    overflow-y: auto; /*scroll interno si el texto es largo*/
+    scrollbar-width: thin;
+    scrollbar-color: var(--form-verde) transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.contenido-terminos h4{
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    color: var(--form-verde);
+}
+.contenido-terminos p{
+    margin: 0 0 0.6rem;
+}
+.contenido-terminos p:last-child{
+    margin-bottom: 0;
+}
+
+/*Mientras no se acepte, los términos quedan desplegados a la vista.*/
+.contact-form:has(#contacto-terminos:checked) .terminos-desplegable{
+    display: none;
+}

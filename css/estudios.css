@@ -1,0 +1,96 @@
+.estudios{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--texto-suave);
+}
+.container-estudios{
+    width: 75%;
+    padding: 2rem;
+    margin: 5rem auto;
+    line-height: 1.6;
+}
+.container-estudios h2{
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.container-estudios .comando{
+    text-align: left;
+}
+/*Contenedor de la lista de estudios (uno debajo del otro)*/
+.lista-estudios{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+/*Cada estudio como una caja alargada*/
+.estudio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background-color: var(--superficie);
+    border: 1px solid var(--superficie-borde);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 5px var(--sombra);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.estudio:hover{
+    transform: translateX(5px);
+    border-color: var(--acento);
+}
+/*Texto del estudio (ocupa el lado izquierdo)*/
+.estudio-info{
+    flex: 1;
+    min-width: 0;
+}
+/*Imagen del estudio integrada al costado derecho*/
+.estudio-img{
+    flex: 0 0 auto;
+    width: 150px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+.estudio h3{
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--colorh1-color);
+}
+.estudio p{
+    margin: 0.2rem 0;
+    color: var(--texto-suave);
+}
+
+/* Celulares (Pantallas pequeñas, hasta 767px)*/
+@media (max-width: 767px){
+    .container-estudios{
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem auto;
+        font-size: 0.9rem;
+    }
+    .estudio{
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    .estudio-img{
+        width: 84px;
+        height: 62px;
+    }
+}
+
+/*Tablet (Pantallas medianas, entre 768px y 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px){
+    .container-estudios{
+        width: 90%;
+    }
+}
+
+/*Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px){
+    .container-estudios{
+        width: 75%;
+    }
+}

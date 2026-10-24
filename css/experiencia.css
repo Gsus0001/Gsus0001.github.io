@@ -1,0 +1,119 @@
+.experiencia{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--texto-suave);
+}
+.container-experiencia{
+    width: 75%;
+    padding: 2rem;
+    margin: 5rem auto;
+    line-height: 1.6;
+}
+.container-experiencia h2{
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.container-experiencia .comando{
+    text-align: left;
+}
+
+/*Línea de tiempo de los trabajos*/
+.lista-experiencia{
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    border-left: 2px solid var(--superficie-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+/*Cada trabajo como una tarjeta con un punto en la línea de tiempo*/
+.trabajo{
+    position: relative;
+    background: var(--superficie);
+    border: 1px solid var(--superficie-borde);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 2px 5px var(--sombra);
+    transition: transform 0.2s, border-color 0.2s;
+}
+.trabajo:hover{
+    transform: translateX(5px);
+    border-color: var(--acento);
+}
+/*El punto que conecta la tarjeta con la línea de tiempo*/
+.trabajo::before{
+    content: "";
+    position: absolute;
+    left: -2.72rem;
+    top: 1.5rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    background: var(--acento);
+    border: 2px solid var(--body-bg-color);
+    box-shadow: 0 0 0 3px var(--superficie);
+}
+.trabajo h3{
+    margin: 0 0 0.35rem 0;
+    font-size: 1.15rem;
+    color: var(--colorh1-color);
+}
+/*Fila con empresa y período*/
+.trabajo-meta{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin: 0 0 0.75rem 0;
+    font-size: 0.9rem;
+}
+.trabajo-meta .empresa{
+    color: var(--acento);
+    font-weight: 600;
+}
+.trabajo-meta .periodo{
+    color: var(--texto-suave);
+    font-family: "Consolas", "Courier New", monospace;
+}
+.trabajo p:last-child{
+    margin-bottom: 0;
+    color: var(--texto-suave);
+}
+
+/* Celulares (Pantallas pequeñas, hasta 767px)*/
+@media (max-width: 767px){
+    .container-experiencia{
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem auto;
+        font-size: 0.9rem;
+    }
+    .lista-experiencia{
+        padding-left: 1.25rem;
+        gap: 1.25rem;
+    }
+    .trabajo{
+        padding: 1rem;
+    }
+    .trabajo::before{
+        left: -1.9rem;
+        top: 1.25rem;
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+}
+
+/*Tablet (Pantallas medianas, entre 768px y 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px){
+    .container-experiencia{
+        width: 90%;
+    }
+}
+
+/*Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px) {
+    .container-experiencia{
+        width: 75%;
+    }
+}

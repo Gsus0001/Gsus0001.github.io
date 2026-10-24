@@ -1,0 +1,70 @@
+.contacto {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--texto-suave);
+}
+.container-contacto {
+    width: 75%;
+    padding: 2rem;
+    margin: 5rem auto 0 auto;
+    line-height: 1.6;
+}
+
+.container-contacto h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.container-contacto .comando{
+    display: block;
+    text-align: left;
+}
+
+.formulario-contacto {
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--sombra);
+}
+
+.contacto iframe {
+    border: none;
+    width: 100%;
+    max-width: 640px;
+    height: 1350px;
+    border-radius: 8px;
+    background: #ffffff;
+    color-scheme: light; /*le pide al iframe renderizarse en claro*/
+}
+
+/* Celulares (Pantallas pequeñas, hasta 767px)*/
+@media (max-width: 767px) {
+    .container-contacto {
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem auto 0 auto;
+    }
+    .formulario-contacto {
+        padding: 0.75rem;
+    }
+    .contacto iframe {
+        height: 1050px;
+    }
+}
+
+/*Tablet (Pantallas medianas, entre 768px y 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container-contacto {
+        width: 90%;
+    }
+}
+
+/*Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px) {
+    .container-contacto {
+        width: 75%;
+    }
+}

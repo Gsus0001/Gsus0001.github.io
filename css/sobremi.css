@@ -1,0 +1,94 @@
+.sobremi{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.container-sobremi{
+    width: 75%;
+    padding: 2rem;
+    margin: 5rem auto 0 auto;
+    line-height: 1.6;
+}
+.container-sobremi h2{
+    text-align: left;
+    margin-bottom: 2rem;
+}
+.container-sobremi .comando{
+    text-align: left;
+}
+/*Fila con la foto y el texto*/
+.contenido-sobremi{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2.5rem;
+    background: var(--superficie);
+    border: 1px solid var(--superficie-borde);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--sombra);
+}
+/*Foto de perfil con anillo de acento*/
+.img-perfil{
+    width: 210px;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 30%;
+    object-fit: cover;
+    border: 3px solid var(--acento);
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--acento) 18%, transparent);
+}
+.texto-sobremi{
+    line-height: 1.7;
+}
+.texto-sobremi p{
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+}
+.texto-sobremi strong{
+    color: var(--colorh1-color);
+}
+
+/* Celulares (Pantallas pequeñas, hasta 767px)*/
+@media (max-width: 767px){
+    .container-sobremi{
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem auto 0 auto;
+    }
+    .container-sobremi h2{
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    .contenido-sobremi{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .img-perfil{
+        width: 150px;
+        height: 150px;
+    }
+    .texto-sobremi p{
+        font-size: 0.95rem;
+    }
+}
+
+/*Tablet (Pantallas medianas, entre 768px y 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px){
+    .container-sobremi{
+        width: 90%;
+    }
+    .contenido-sobremi{
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+/*Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px) {
+    .container-sobremi{
+        width: 75%;
+    }
+}

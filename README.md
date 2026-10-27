@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Edu+QLD+Hand&size=35&pause=3000&color=44FF44&background=0D1117&center=true&vCenter=true&width=435&lines=Portafolio" />
+  <img src="https://readme-typing-svg.demolab.com?font=Micro+5+Charted&size=80&pause=4000&color=44FF44&background=0D1117&center=true&vCenter=true&width=435&lines=Portafolio" />
   </p>
   
 ## `Descripción:`
